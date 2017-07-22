@@ -1,3 +1,16 @@
+makecacheMatrix<-function(x=matrix()){
+  i<-NULL
+  set<-function(y){
+    x<<-y
+    i<<-NULL
+  }
+    get<-function() x
+    setinversion<-function(inversion) i<<-inversion
+    getinversion<-function() i
+    list(set=set, get=get,
+         setinversion=setinversion,
+         getinversion=getinversion)
+}
 cachesolve<-function(x,...){
   i<-x$getinversion()
   if(!is.null(i)){
