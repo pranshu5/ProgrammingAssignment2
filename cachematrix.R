@@ -1,3 +1,8 @@
+##The below makecacheMatrix function takes creates a matrix and sets it primary values.
+##This function set values of matrix variable x and get the values if already inversion
+##is performed.
+
+
 makecacheMatrix<-function(x=matrix()){
   i<-NULL
   set<-function(y){
@@ -11,6 +16,10 @@ makecacheMatrix<-function(x=matrix()){
          setinversion=setinversion,
          getinversion=getinversion)
 }
+##The below cachesolve function performs the inversion on the matrix and also verifies the values.
+##If the inversion is already performed the matrix retrives the cached values.Foe new matrix
+##the cachesolve function performs the inversion using solve function of R.
+
 cachesolve<-function(x,...){
   i<-x$getinversion()
   if(!is.null(i)){
