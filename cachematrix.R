@@ -31,3 +31,16 @@ cachesolve<-function(x,...){
   x$setinversion(i)
   return(i)  
 }
+
+##Below is a sample solution to the function
+
+##getmatrix<-makecacheMatrix(matrix(c(1:4),2,2))
+##> getmatrix$get()
+##     [,1] [,2]
+##[1,]    1    3
+##[2,]    2    4
+##> cachesolve(getmatrix)
+##     [,1] [,2]
+##[1,]   -2  1.5
+##[2,]    1 -0.5
+
